@@ -1,0 +1,136 @@
+plugins {
+    id 'com.android.application'
+}
+//apply plugin: 'kotlin-android'
+//apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 31
+
+    defaultConfig {
+        applicationId "com.ppx.demo"
+        minSdkVersion 23
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+    viewBinding {
+        enabled = true
+    }
+
+//    dataBinding {
+//        enabled = true
+//    }
+
+//    kotlinOptions {
+//        jvmTarget = "1.8"
+//    }
+}
+
+//repositories {
+//    flatDir {
+//        dirs 'libs'
+//    }
+//}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src']
+        }
+        resources {
+            srcDirs = ['resources']
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    // appcompat
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    // lifecycle
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-common-java8:2.0.0-rc01'
+    // constraint layout
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    // test
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.8'
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+
+    implementation("com.mikepenz:materialdrawer:9.0.1")
+//    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.annotation:annotation:1.3.0'
+    implementation "com.google.android.material:material:1.5.0-alpha05"
+
+    implementation 'com.github.andremion:floatingnavigationview:1.3.0'
+
+
+//    implementation 'com.google.android.material:material:1.5.0'
+    implementation "io.github.cymchad:BaseRecyclerViewAdapterHelper:4.0.1"
+
+//    implementation 'com.jakewharton:butterknife:10.2.3'
+//    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.google.code.gson:gson:2.8.9'
+
+
+    // glide
+//    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    implementation 'jp.wasabeef:glide-transformations:4.1.0'
+
+    implementation 'androidx.palette:palette:1.0.0'
+    // badgeView
+    implementation 'q.rorbin:badgeview:1.1.3'
+
+    implementation 'org.rajawali3d:rajawali:1.1.970'
+
+    implementation project(':libgdx_spine')
+
+    def jme3 = [g:'org.jmonkeyengine', v:'3.6.0-stable']
+    //android 至少需要这3个库
+    implementation "$jme3.g:jme3-core:$jme3.v"
+    implementation "$jme3.g:jme3-android:$jme3.v"
+    implementation "$jme3.g:jme3-android-native:$jme3.v"
+
+    //在导入jme3teest里面的java代码的时候 是需要这些库的
+    implementation "$jme3.g:jme3-effects:$jme3.v"
+    implementation "$jme3.g:jme3-jbullet:$jme3.v"
+    implementation "$jme3.g:jme3-networking:$jme3.v"
+    implementation "$jme3.g:jme3-niftygui:$jme3.v"
+    implementation "$jme3.g:jme3-plugins:$jme3.v"
+    implementation "$jme3.g:jme3-terrain:$jme3.v"
+
+
+//    implementation project(':jme3-core')
+//    implementation project(':jme3-android')
+//    implementation project(':jme3-android-native')
+//    implementation project(':jme3-effects')
+//    implementation project(':jme3-jbullet')
+//    implementation project(':jme3-networking')
+//    implementation project(':jme3-niftygui')
+//    implementation project(':jme3-plugins')
+//    implementation project(':jme3-terrain')
+}
+

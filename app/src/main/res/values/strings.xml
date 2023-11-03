@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyApplicationForTest</string>
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
+
+    <string name="skeletal_animation_blending_button_idle">IDLE</string>
+    <string name="skeletal_animation_blending_button_walk">WALK</string>
+    <string name="skeletal_animation_blending_button_arm_stretch">ARM STRETCH</string>
+    <string name="skeletal_animation_blending_button_bend">BEND</string>
+</resources>
