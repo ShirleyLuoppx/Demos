@@ -9,8 +9,10 @@ import com.jme3.app.AndroidHarness;
  */
 public class JmeMainActivity extends AndroidHarness {
     public JmeMainActivity() {
-        this.appClass = "com.ppx.demo.jme.mytest.HelloMyJme3";
+//        this.appClass = "com.ppx.demo.jme.mytest.HelloMyJme3";
+        this.appClass = "com.ppx.demo.jme.mytest.AsheFbxDemo";
     }
 
 }
+
 
