@@ -13,7 +13,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/TransparentAppTheme">
+        android:theme="@style/TransparentAppTheme"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".threejs.ThreeJsDemo"
             android:exported="true">

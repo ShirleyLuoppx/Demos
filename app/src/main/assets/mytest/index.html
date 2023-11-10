@@ -13,12 +13,20 @@
 </head>
 
 <body>
+
+<p id="currentPath"></p >
+
+<script>
+        // 获取当前路径并输出到页面上
+        document.getElementById('currentPath').innerHTML = "当前路径是: " + window.location.href;
+    </script>
+
 <!-- type="importmap"功能：.html文件中也能和nodejs开发环境中一样方式，引入npm安装的js库 -->
 <script type="importmap">
         {
 			"imports": {
-				"three": "../../../three.js/build/three.module.js",
-                "three/addons/": "../../../three.js/examples/jsm/"
+				"three": "../three.js/build/three.module.js",
+                "three/addons/": "../three.js/examples/jsm/"
 			}
 		}
 	</script>
