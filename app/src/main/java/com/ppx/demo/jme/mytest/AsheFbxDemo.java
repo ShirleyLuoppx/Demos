@@ -1,5 +1,7 @@
 package com.ppx.demo.jme.mytest;
 
+import com.jme3.animation.AnimChannel;
+import com.jme3.animation.AnimControl;
 import com.jme3.app.SimpleApplication;
 import com.jme3.light.AmbientLight;
 import com.jme3.light.DirectionalLight;
@@ -28,8 +30,8 @@ public class AsheFbxDemo extends SimpleApplication {
         //    com.jme3.asset.AssetLoadException: No loader registered for type "fbx"  直接加载fbx文件会报错
         assetManager.registerLoader(FbxLoader.class, ".fbx");
         // 加载FBX文件
-//        Spatial fbxModel = assetManager.loadModel("Models/Ashe/mesh_sshe_beautyshot.fbx");
-        Spatial fbxModel = assetManager.loadModel("car/Transport_Shuttle_fbx.fbx");
+//        Spatial fbxModel = assetManager.loadModel("Models/Ashe/mesh_sshe_beautyshot.fbx");// 这个fbx文件只有200多k
+        Spatial fbxModel = assetManager.loadModel("car/Five_Wheeler.fbx");
 
         // 创建一个带有纹理的材质
         Material material = new Material(assetManager, "Common/MatDefs/Light/Lighting.j3md");
@@ -50,7 +52,7 @@ public class AsheFbxDemo extends SimpleApplication {
 
         // 将模型添加到场景中   FBX model isn't using correct forward axis sign. Orientation could be incorrect
         rootNode.attachChild(fbxModel);
-        fbxModel.scale(0.3f);
+        fbxModel.scale(0.03f);
         fbxModel.center();
 
         cam.setLocation(new Vector3f(0.41600543f, 3.2057908f, 6.6927643f));
@@ -84,7 +86,15 @@ public class AsheFbxDemo extends SimpleApplication {
         rootNode.addLight(ambient);
 
         //TODO  加入fbx动画，按照vsCode中的步骤
+        // Retrieve the AnimControl.
+//        AnimControl animCtrl = fbxModel.getControl(AnimControl.class);
+//        // Create an animation channel, by default assigned to all bones.
+//        AnimChannel animChan = animCtrl.createChannel();
+//        // Play an animation
+//        animChan.setAnim("MyAnim");
 
+
+        //警告 N-gon encountered, ignoring. The mesh may not appear correctly. Triangulate your model prior to export.
     }
 
 
