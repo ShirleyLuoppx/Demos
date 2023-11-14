@@ -106,8 +106,6 @@ dependencies {
 
     implementation 'org.rajawali3d:rajawali:1.1.970'
 
-    implementation project(':libgdx_spine')
-
     def jme3 = [g:'org.jmonkeyengine', v:'3.6.0-stable']
     //android 至少需要这3个库
     implementation "$jme3.g:jme3-core:$jme3.v"
@@ -123,6 +121,6 @@ dependencies {
 //    implementation "$jme3.g:jme3-plugins:$jme3.v"
 //    implementation "$jme3.g:jme3-terrain:$jme3.v"
 //    implementation "$jme3.g:jme3-examples:$jme3.v"
-
+    implementation "androidx.webkit:webkit:1.2.0"
 }
 

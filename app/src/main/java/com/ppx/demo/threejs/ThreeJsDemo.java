@@ -1,9 +1,14 @@
 package com.ppx.demo.threejs;
 
+import android.net.Uri;
 import android.webkit.WebChromeClient;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import androidx.webkit.WebViewAssetLoader;
 
 import com.ppx.demo.BaseActivity;
 import com.ppx.demo.R;
@@ -20,8 +25,7 @@ public class ThreeJsDemo extends BaseActivity {
 
     @Override
     public void initView() {
-        String url = "file:///android_asset/mytest/index.html";//简单的页面就能正常加载
-        //        url = "http://127.0.0.1:5500/mytest/index.html";
+        String url = "file:///android_asset/carhtml/car/index.html";
 
         m_Webgl3D_WV = findViewById(R.id.webview);
         m_WebSettings = m_Webgl3D_WV.getSettings();
